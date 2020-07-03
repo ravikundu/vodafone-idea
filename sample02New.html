@@ -16,9 +16,9 @@
 
                 marker.addEventListener('markerFound', function() {
                     var markerId = marker.id;
-                    document.getElementById("audio").play();
+                    //document.getElementById("audio").play();
                     //document.getElementById("IronMan").animation.play();
-                    IronMan.setAttribute('animation-mixer',{timeScale: 1,clip:"*"});
+                    //IronMan.setAttribute('animation-mixer',{timeScale: 1,clip:"*"});
                     //document.getElementById("IronMan").animation-mixer.timeScale = 1 ;
                     console.log('markerFound', IronMan.id);
                     // TODO: Add your own code here to react to the marker being found.
@@ -26,10 +26,10 @@
 
                 marker.addEventListener('markerLost', function() {
                     var markerId = marker.id;
-                    document.getElementById("audio").pause();
+                    //document.getElementById("audio").pause();
                     //document.getElementById("IronMan").animation.pause();
                     //document.getElementById("IronMan").setAttribute(animation-mixer,"clip: run");
-                    document.getElementById("IronMan").setAttribute('animation-mixer',{timeScale: 0});
+                    //document.getElementById("IronMan").setAttribute('animation-mixer',{timeScale: 0});
 
                     console.log('markerLost', markerId);
                     // TODO: Add your own code here to react to the marker being lost.
@@ -54,12 +54,12 @@
             <!-- <a-box position='0 0.5 0' color="yellow"></a-box>  -->
             <a-entity
             position="0 0 0"
-            scale="0.005 0.005 0.005"
+            scale="0.1 0.1 0.1"
             rotation="270 0 0"
             obj-model="obj: url(IronMan.obj); mtl: url(IronMan.mtl)" id="IronMan" animation-mixer="timeScale: 0;loop : once"/>
             <!--<a-entity
             position="0 0 0"
-            scale="0.01 0.01 0.01"
+            scale="0.1 0.1 0.1"
             rotation="270 0 0"
             gltf-model="#IronMan"/>-->
         </a-marker>
